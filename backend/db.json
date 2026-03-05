@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "Soumya",
+      "age": "21",
+      "email": "noobsoumya03@gmail.com",
+      "password": "1234",
+      "dob": "02/05/2004",
+      "city": "Cuttack",
+      "gender": "Male"
+    },
+    {
+      "id": "05eb",
+      "username": "",
+      "age": "",
+      "email": "",
+      "password": "",
+      "dob": "",
+      "city": "",
+      "gender": ""
+    },
+    {
+      "id": "adb6",
+      "username": "soumya",
+      "age": "999",
+      "email": "hvhsbx@gmail.com",
+      "password": "1234",
+      "dob": "2026-03-08",
+      "city": "Delhi",
+      "gender": "Male"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

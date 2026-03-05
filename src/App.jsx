@@ -4,6 +4,7 @@ import PropsDrilling from "./concept/propsdrilling/PropsDrilling"
 import ContextApiConcept from "./concept/contextapi/ContextApiConcept"
 import HOC from "./concept/hoc/HOC"
 import ReactOptimization from "./concept/optimization/ReactOptimization"
+import CrudOperationHome from "./concept/crudoperation/CrudOperationHome"
 
 // import Herosection from "./components/Herosection"
 // import Navbar from "./components/Navbar"
@@ -48,9 +49,10 @@ const App=()=>{
     {/* <PropsDrilling/> */}
     {/* <ContextApiConcept/> */}
     {/* <HOC/> */}
-   {/* <ToastContainer/> */}
    {/* <ReactOptimization/> */}
-   
+   <CrudOperationHome/>
+
+   <ToastContainer/>
 </div>
 )
 }
