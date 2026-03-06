@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate=useNavigate()
   const [formdata,setformdata]=useState({
     email:"",
     password:""
@@ -13,6 +14,13 @@ const Login = () => {
   const handleform=(e)=>{
     e.preventDefault()
     console.log(formdata);
+    if(!formdata.email || !formdata.password){
+      alert("enter your credentials");
+      return
+    }
+    else{
+      navigate('/dashboard')
+    }
     setformdata({
       email:"",
       password:""

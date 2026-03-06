@@ -1,8 +1,9 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom';
 
 const Register = () => {
-
+  
   const [formData, setFormData] = useState({
     username: "",
     age: "",
@@ -29,8 +30,9 @@ const Register = () => {
     //! send this data to backend for registration purpose 
     //!if registration done successfully then navigate to login page
    try {
-    const {data}= await axios.post("http://localhost:3000/users",formData)
+    const {data}= await axios.post("http://localhost:30006/users",formData)
     console.log(data);
+    
    } catch (error) {
     console.log(error);
    }
@@ -162,7 +164,7 @@ const Register = () => {
         className="w-full py-2 text-white font-semibold rounded-md 
         bg-teal-600 hover:bg-teal-700 transition shadow-sm"
       >
-        Register
+       <Link to="/login">Register</Link>
       </button>
 
     </form>
