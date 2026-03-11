@@ -1,5 +1,8 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 
 const Login = () => {
   const navigate=useNavigate()
@@ -11,16 +14,33 @@ const Login = () => {
   const {name,value}=e.target
   setformdata({...formdata,[name]:value})
   }
-  const handleform=(e)=>{
+  const handleform=async(e)=>{
     e.preventDefault()
-    console.log(formdata);
-    if(!formdata.email || !formdata.password){
-      alert("enter your credentials");
+    // console.log(formdata);
+    const {data}=await axios.get("http://localhost:3000/users")
+    console.log(data);
+    const currentuser=data.find((ele)=> ele.email===formdata.email )
+    console.log(currentuser);
+    if(!currentuser){
+      toast.error("Email Id is Not Registered")
       return
     }
-    else{
-      navigate('/dashboard')
+    if(currentuser.password!==formdata.password){
+      toast.error("Password Invalid")
+      return
     }
+    const token="shgvdasvgdsy.svdhsvddsdvjj."+currentuser.id
+    localStorage.setItem("jwt_token",JSON.stringify(token))
+    navigate("/dashboard")
+    
+    // if(!formdata.email || !formdata.password){
+    //   toast.error("Enter Your Credentials");
+    //   return
+    // }
+    // else{
+    //   navigate('/dashboard')
+    //   toast.success("Login Successfully");
+    // }
     setformdata({
       email:"",
       password:""

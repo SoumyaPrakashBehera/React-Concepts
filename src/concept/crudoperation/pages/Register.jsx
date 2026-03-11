@@ -1,9 +1,10 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const Register = () => {
-  
+  const navigate=useNavigate()
   const [formData, setFormData] = useState({
     username: "",
     age: "",
@@ -13,6 +14,7 @@ const Register = () => {
     city: "",
     gender: ""
   });
+  const {username,age,email,password,dob,city,gender}=formData
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,13 +32,12 @@ const Register = () => {
     //! send this data to backend for registration purpose 
     //!if registration done successfully then navigate to login page
    try {
-    const {data}= await axios.post("http://localhost:30006/users",formData)
-    console.log(data);
-    
-   } catch (error) {
-    console.log(error);
-   }
-
+    if(!username|| !age || !email || !password || !dob || !city || !gender){
+      toast.error("Every field is required",{position:'top-center'})
+      return
+    }
+    const {data}=await axios.post("http://localhost:3000/users",formData)
+    toast.success("Registered Successfully",{position:'top-right'})
     setFormData({
     username: "",
     age: "",
@@ -46,6 +47,12 @@ const Register = () => {
     city: "",
     gender: ""
   });
+    navigate("/login")
+   } catch (error) {
+    console.log(error);
+   }
+
+    
 
   };
 
@@ -164,7 +171,7 @@ const Register = () => {
         className="w-full py-2 text-white font-semibold rounded-md 
         bg-teal-600 hover:bg-teal-700 transition shadow-sm"
       >
-       <Link to="/login">Register</Link>
+       Register
       </button>
 
     </form>

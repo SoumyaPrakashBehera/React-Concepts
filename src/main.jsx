@@ -1,4 +1,10 @@
 import {createRoot} from "react-dom/client"
 import App from "./App"
 import "./index.css"
-createRoot(document.getElementById("root")).render(<App/>)
+import GlobalContext from "./concept/crudoperation/context/GlobalContext"
+
+createRoot(document.getElementById("root")).render(
+  <GlobalContext>
+    <App/>
+  </GlobalContext>
+)

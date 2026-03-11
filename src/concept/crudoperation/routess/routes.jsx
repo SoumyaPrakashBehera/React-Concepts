@@ -7,6 +7,11 @@ import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Dashboard from "../pages/Dashboard";
+import PrivateRouting from "../privaterouting/PrivateRouting";
+import Profile from "../pages/dashboardpages/Profile";
+import UpdateProfile from "../pages/dashboardpages/UpdateProfile";
+import DashBoardHome from "../pages/dashboardpages/DashBoardHome";
+import UpdateStatus from "../privaterouting/UpdateStatus";
 
 export const routes=createBrowserRouter([
   {
@@ -15,7 +20,7 @@ export const routes=createBrowserRouter([
     children:[
       {
         path:"/",
-      element:<Home/>
+      element:<UpdateStatus><Home/></UpdateStatus>
       },
       {
       path:"/about",
@@ -40,7 +45,21 @@ export const routes=createBrowserRouter([
       ,
       {
          path:"/dashboard",
-      element:<Dashboard/>
+      element:<PrivateRouting><Dashboard/></PrivateRouting>,
+      children:[
+        {
+          path:"/dashboard/profile/:userid",
+          element:<Profile/>
+        },
+        {
+          path:"/dashboard",
+          element:<DashBoardHome/>
+        },
+        {
+          path:"/dashboard/updateprofile/:userid",
+          element:<UpdateProfile/>
+        }
+      ]
       }
 
     ]

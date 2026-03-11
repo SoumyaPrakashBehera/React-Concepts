@@ -1,54 +1,14 @@
 {
   "users": [
     {
-      "id": "1",
-      "username": "Soumya",
-      "age": "21",
-      "email": "noobsoumya03@gmail.com",
-      "password": "1234",
-      "dob": "02/05/2004",
-      "city": "Cuttack",
-      "gender": "Male"
-    },
-    {
-      "id": "7f01",
-      "username": "rohit",
-      "age": "37",
-      "email": "rohit@gmail.com",
-      "password": "12345",
-      "dob": "2026-01-30",
-      "city": "Bangalore",
-      "gender": "Male"
-    },
-    {
-      "id": "e01d",
-      "username": "soumya1111",
-      "age": "44",
-      "email": "sdasdk@gmail.com",
-      "password": "651151",
-      "dob": "2026-03-03",
-      "city": "Delhi",
-      "gender": "Male"
-    },
-    {
-      "id": "f6dd",
-      "username": "soumya4846",
-      "age": "44",
-      "email": "asdasd@gmail.com",
-      "password": "54534",
-      "dob": "2026-03-16",
-      "city": "Hyderabad",
-      "gender": "Male"
-    },
-    {
-      "id": "c8eb",
-      "username": "soumya@gmail.com",
+      "id": "8e06",
+      "username": "Noob",
       "age": "22",
-      "email": "asdasd@gmail.com",
-      "password": "454",
-      "dob": "",
-      "city": "",
-      "gender": ""
+      "email": "noobsoumya03@gmail.com",
+      "password": "123",
+      "dob": "2026-03-11",
+      "city": "Mumbai",
+      "gender": "Male"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
