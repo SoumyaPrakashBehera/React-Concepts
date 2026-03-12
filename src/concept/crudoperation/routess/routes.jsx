@@ -12,6 +12,9 @@ import Profile from "../pages/dashboardpages/Profile";
 import UpdateProfile from "../pages/dashboardpages/UpdateProfile";
 import DashBoardHome from "../pages/dashboardpages/DashBoardHome";
 import UpdateStatus from "../privaterouting/UpdateStatus";
+import AddNotes from "../pages/dashboardpages/AddNotes";
+import AllNotes from "../pages/dashboardpages/AllNotes";
+import UpdateNotes from "../pages/dashboardpages/UpdateNotes";
 
 export const routes=createBrowserRouter([
   {
@@ -58,6 +61,16 @@ export const routes=createBrowserRouter([
         {
           path:"/dashboard/updateprofile/:userid",
           element:<UpdateProfile/>
+        },{
+           path:"/dashboard/addnotes",
+          element:<AddNotes/>
+        },{
+           path:"/dashboard/allnotes",
+          element:<AllNotes/>
+        }
+        ,{
+           path:"/dashboard/updatenotes/:userid/:notesid",
+          element:<UpdateNotes/>
         }
       ]
       }

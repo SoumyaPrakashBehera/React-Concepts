@@ -11,5 +11,19 @@
       "gender": "Male"
     }
   ],
+  "notes": [
+    {
+      "id": "5de0",
+      "title": "Learn React",
+      "description": "Practice React components, hooks, and Tailwind CSS for building modern UI.",
+      "tags": "react, javascript, frontend"
+    },
+    {
+      "id": "6941",
+      "title": "ssdsdasds",
+      "description": "dsds",
+      "tags": "dsds"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

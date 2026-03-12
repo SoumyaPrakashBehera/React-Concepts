@@ -18,8 +18,8 @@ const id=JSON.parse(localStorage.getItem("jwt_token")).split(".")[2]
   const sidebarItems = [
     { id: 1, title: "Dashboard", icon: <IoHomeOutline/>, path: "/dashboard" },
     { id: 5, title: "Profile", icon: <AiOutlineUser />, path: `/dashboard/profile/${id}` },
-    { id: 3, title: "AddNotes", icon: <FaNoteSticky />, path: "/addnotes" },
-    { id: 4, title: "UpdateNotes", icon: <FiEdit />, path: "/updatenotes" }
+    { id: 3, title: "AddNotes", icon: <FaNoteSticky />, path: "/dashboard/addnotes" },
+    { id: 4, title: "AllNotes", icon: <FiEdit />, path: "/dashboard/allnotes" }
   ];
   const navigate=useNavigate()
   
