@@ -5,7 +5,7 @@ const PropsHome=()=>{
   return (
     <div>
       {/* <Parent/> */}
-      <DefaultPropsConcept/>
+      {/* <DefaultPropsConcept/> */}
     </div>
   )
 }

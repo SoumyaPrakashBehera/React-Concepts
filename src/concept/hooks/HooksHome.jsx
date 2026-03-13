@@ -6,6 +6,7 @@ import UseRefHookHome from "./userefhook/UseRefHookHome";
 import UseEffectHome from "./useffecthook/UseEffectHome";
 import UseMemoHook from "./usememohook/UseMemoHook";
 import UseCallBackHook from "./usecallbackhook/UseCallBackHook";
+import UseReducerHook from "./usereducerhook/UseReducerHook";
 const HooksHome=()=>{
   return(
     <div id="hookshome">
@@ -15,7 +16,8 @@ const HooksHome=()=>{
       {/* <UseRefHookHome/> */}
       {/* <UseEffectHome/> */}
       {/* <UseMemoHook/> */}
-      <UseCallBackHook/>
+      {/* <UseCallBackHook/> */}
+      <UseReducerHook/>
     </div>
   )
 }
