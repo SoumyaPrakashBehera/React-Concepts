@@ -14,6 +14,7 @@ import { ToastContainer } from "react-toastify"
 // import FormHandling from "./concept/formhandling/FormHandling"
 // import ReactFragments from "./concept/fragments/ReactFragments"
 import HooksHome from "./concept/hooks/HooksHome"
+import ReduxToolKitConcept from "./concept/reduxtoolkitconcept/ReduxToolKitConcept"
 // import Icons_Implement from "./concept/iconsimplementation/Icons_Implement"
 // import JsxExpression from "./concept/jsxexpression/JsxExpression"
 // import ListAndKeys from "./concept/listandkeys/ListAndKeys"
@@ -38,7 +39,7 @@ const App=()=>{
     {/* <TernaryRender/> */}
     {/* <PropsHome/> */}
     {/* <Icons_Implement/> */}
-    <HooksHome/>
+    {/* <HooksHome/> */}
     {/* <ReactFragments/> */}
     {/* <ListAndKeys/> */}
     {/* <FormHandling/> */}
@@ -52,6 +53,7 @@ const App=()=>{
     {/* <HOC/> */}
    {/* <ReactOptimization/> */}
    {/* <CrudOperationHome/> */}
+   <ReduxToolKitConcept/>
 
    <ToastContainer/>
 </div>
